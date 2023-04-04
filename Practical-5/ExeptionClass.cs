@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Practical_5
 {
-      class ExeptionClass
+    class ExeptionClass
     {
         public static void Main(string[] args)
         {
-            int[] integerArray = new int[] { 211, 321, 431,541, 651 };
+            int[] integerArray = new int[] { 211, 321, 431, 541, 651 };
             Console.WriteLine("Index Value");
-                for(int i=0;i<integerArray.Length;i++)
+            for (int i = 0; i < integerArray.Length; i++)
             {
-                Console.WriteLine("  "+i +"   "+integerArray[i]);
+                Console.WriteLine("  " + i + "   " + integerArray[i]);
             }
 
             try
@@ -25,13 +25,13 @@ namespace Practical_5
                     Console.WriteLine("  " + i + "   " + integerArray[i]);
                 }
             }
-            catch (Exception ex)
+            catch (IndexOutOfRangeException ex)
             {
-                Console.WriteLine(ex);
-               
+                Console.WriteLine(ex.Message);
+
             }
             finally { Console.WriteLine("\n\nInside Finally Block ."); }
-        
+
         }
     }
 }
